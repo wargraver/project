@@ -1,0 +1,39 @@
+:root{
+    --speed:4;
+}
+.machine{
+    background-color: #ffbb00;
+    height: 400px;
+    width: 800px;
+    margin: 100px;
+    display: flex;
+   text-align: center;
+}
+#inp1 {
+    font-size: 30pt;
+    margin-left: 100px;
+    width: 50px;
+}
+.slot{
+    background-color: cornsilk;
+    width: 100px;
+    height: 150px;
+    margin:60px;
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    overflow: hidden;
+}
+.slot>.value{
+   animation-name: roll;
+   animation-iteration-count: infinite;
+   animation-duration: calc(1s/var(--speed));
+}
+@keyframes roll{
+    0%{
+   transform: translateY(-140px)
+    }
+    100%{
+        transform: translateY(140px)
+    }
+}
